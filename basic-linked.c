@@ -9,7 +9,7 @@ typedef struct{
 int main(void) {
   student *ptrfirst;
   ptrfirst=malloc(sizeof(student));
-  ptrfirst->school_no=2019555049;
+  ptrfirst->school_no=203131049;
   ptrfirst->gpa=90;
   strcpy(ptrfirst->name,"Musa Şahin Kundakcı");
   ptrfirst->next=malloc(sizeof(student));
