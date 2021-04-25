@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-typedef struct{
+typedef struct listNode{
   char data;
   struct listNode *nextPtr;
 }ListNode_t;
