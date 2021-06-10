@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void) {
   typedef struct Student{
     int id;
@@ -30,6 +30,19 @@ int main(void) {
         }
         fclose(fileptr);
         break;
+      }
+      case 3:{
+        int a;
+        fileptr=fopen("database.dat","rb+");
+        printf("Which id\n?");scanf("%d",&a);
+        fseek(fileptr,sizeof(Student)*a,SEEK_SET);
+        Student *s;
+        s=malloc(sizeof(Student));
+        s->id=a;
+        fwrite(s,sizeof(Student),1,fileptr);
+        free(s);
+        fclose(fileptr);
+        printf("Student is deleted!");
       }
 
     }
